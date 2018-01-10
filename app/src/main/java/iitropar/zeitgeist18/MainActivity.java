@@ -108,10 +108,8 @@ public class MainActivity extends AppCompatActivity
 
         }
         else if (id == R.id.results) {
-            String url = "https://www.facebook.com/";
-            Intent i = new Intent(Intent.ACTION_VIEW);
-            i.setData(Uri.parse(url));
-            context.startActivity(i);
+            Intent intent = new Intent(this, Results.class);
+            startActivity(intent);
 
         } else if (id == R.id.about) {
             Intent intent = new Intent(this, AboutZeitgeist.class);

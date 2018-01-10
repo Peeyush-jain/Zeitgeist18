@@ -8,6 +8,7 @@
          location permissions for the 'MyLocation' functionality. 
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -53,7 +54,8 @@
         <activity android:name=".Helpline" />
         <activity android:name=".Developers" />
         <activity android:name=".Sponsors" />
-        <activity android:name=".MyEvents"></activity>
+        <activity android:name=".MyEvents" />
+        <activity android:name=".Results"></activity>
     </application>
 
 </manifest>
