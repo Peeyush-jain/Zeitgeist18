@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "822922341763",
+    "firebase_url": "https://zeitgeist18-58a42.firebaseio.com",
+    "project_id": "zeitgeist18-58a42",
+    "storage_bucket": "zeitgeist18-58a42.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:822922341763:android:279d17fc32e117d0",
+        "android_client_info": {
+          "package_name": "iitropar.zeitgeist18"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "822922341763-0ml59qlacvb3fncvkd4mvdm1ie7jn9ob.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "iitropar.zeitgeist18",
+            "certificate_hash": "cede5074cbb0da171bcd397149c57ddc040989f5"
+          }
+        },
+        {
+          "client_id": "822922341763-fvo63oa73o9kfq97bsim1jdakes47lsc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJ94gfGAa5_sDQQFyLGqGyHKdAHRxJV2k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "822922341763-fvo63oa73o9kfq97bsim1jdakes47lsc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

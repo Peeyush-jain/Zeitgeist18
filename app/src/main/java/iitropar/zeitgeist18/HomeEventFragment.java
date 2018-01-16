@@ -78,6 +78,7 @@ public class HomeEventFragment extends Fragment {
 
         }
         if (upcomingEventList.size() == 0){
+
             myView = inflater.inflate(R.layout.blank, container, false);
             TextView text = myView.findViewById(R.id.blankText);
             text.setText(R.string.upcomingBlank);

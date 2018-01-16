@@ -6,14 +6,23 @@
     <TextView
         android:id="@+id/blankText"
         android:text="@string/upcomingBlank"
-        android:alpha="1"
         android:textSize="25sp"
-        android:textStyle="bold"
-        android:textColor="@color/black"
+        android:textStyle="italic"
+        android:textColor="@color/colorPrimaryDark"
         android:layout_width="wrap_content"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/refresh"
+        android:background="@color/colorPrimaryDark"
+        android:layout_alignParentBottom="true"
+        android:text="REFRESH"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 </RelativeLayout>

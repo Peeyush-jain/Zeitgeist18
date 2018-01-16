@@ -4,7 +4,6 @@ import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.design.widget.NavigationView;
@@ -13,10 +12,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
-// Change offset in HomeEventFragment to define Day 1 ....
-
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -37,6 +33,7 @@ public class MainActivity extends AppCompatActivity
         // hide 3 dots and insert back button
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setElevation(0);
         context = this ;
         eventList = new ArrayList<>() ;
         dba = new DBHandler(context, null, null, 1);
@@ -63,20 +60,32 @@ public class MainActivity extends AppCompatActivity
         fragmentManager.beginTransaction()
                 .replace(R.id.content_frame, new HomeFragment())
                 .commit();
-        if (!isNotify) {
-            isNotify = true ;
-            for (int i = 0; i < eventList.size(); i++) {
-                Event event = eventList.get(i);
-                String time = event.getEventTime();
-                String[] data = time.split(":");
-                int hrs = Integer.parseInt(data[0]);
-                String data2 = (data[1].subSequence(0, 2)).toString();
-                int mins = Integer.parseInt(data2);
+//        if (!isNotify) {
+//            isNotify = true ;
+//            for (int i = 0; i < eventList.size(); i++) {
+//                Event event = eventList.get(i);
+//                String time = event.getEventTime();
+//                String[] data = time.split(":");
+//                int hrs = Integer.parseInt(data[0]);
+//                String data2 = (data[1].subSequence(0, 2)).toString();
+//                int mins = Integer.parseInt(data2);
+//
+//                addNotification(event.getEventName(), event.getEventVenue(), event.getEventTime(), hrs, mins, i);
+//            }
+//        }
+         int minute1 = 57 ;
+         int minute2 = 59 ;
 
-                addNotification(event.getEventName(), event.getEventVenue(), event.getEventTime(), hrs, mins, i);
-            }
-        }
-        //addNotification("Third Ball Elimination","LT PCSA","20:09",20,10,1);
+//        addNotification("Third Ball Elimination","LT PCSA","20:09",15,minute1,1);
+//        addNotification("Mantra Round","PCSA","34:00",15,minute1,2);
+//        addNotification("Third","LT PCSA","20:09",15,minute1,3);
+//        addNotification("Mantra","PCSA","34:00",15,minute1,4);
+//        addNotification("Third Ball","LT PCSA","20:09",15,minute1,5);
+//        addNotification("Round","PCSA","34:00",15,minute2,6);
+//        addNotification("d Ball Elimination","LT PCSA","20:09",15,minute2,7);
+//        addNotification("tra Round","PCSA","34:00",15,minute2,8);
+//        addNotification("hird Ball Elimination","LT PCSA","20:09",15,minute2,9);
+//        addNotification("ra Round","PCSA","34:00",15,minute2,10);
     }
 
     @Override
@@ -130,6 +139,10 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(this, Sponsors.class);
             startActivity(intent);
 
+        }else if (id == R.id.announcement){
+            Intent intent = new Intent(this, Anouncement.class);
+            startActivity(intent);
+
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -155,8 +168,7 @@ public class MainActivity extends AppCompatActivity
         calendar.set(Calendar.SECOND, 0);
 
 
-        alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(),
-                AlarmManager.INTERVAL_DAY, pendingIntent);
+        alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(),pendingIntent);
 
     }
 

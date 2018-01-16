@@ -48,7 +48,17 @@ public class NotificationService extends IntentService {
         //to be able to launch your activity from the notification
         builder.setContentIntent(pendingIntent);
         Notification notificationCompat = builder.build();
+        builder.setAutoCancel(true);
+        notificationCompat.flags |= Notification.FLAG_AUTO_CANCEL | Notification.FLAG_INSISTENT | Notification.FLAG_SHOW_LIGHTS;
+        notificationCompat.defaults |= Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE;
+        //notification.defaults |= Notification.DEFAULT_VIBRATE;
+        //notification.flags |= Notification.FLAG_SHOW_LIGHTS;
+        notificationCompat.ledARGB = 0xFFFFA500;
+        notificationCompat.ledOnMS = 800;
+        notificationCompat.ledOffMS = 1000;
+
         NotificationManagerCompat managerCompat = NotificationManagerCompat.from(this);
+
         managerCompat.notify(NOTIFICATION_ID, notificationCompat);
     }
 

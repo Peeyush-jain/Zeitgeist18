@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="iitropar.zeitgeist18.MainActivity">
+    tools:context="iitropar.zeitgeist18.MainActivity"
+    android:background="@drawable/schedule">
 
     <ImageView
         android:id="@+id/day1"
         app:layout_widthPercent="50%"
         app:layout_heightPercent="50%"
-        app:srcCompat="@drawable/schedule1"
+
         android:scaleType="centerCrop"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
@@ -20,7 +21,7 @@
         android:id="@+id/day2"
         app:layout_widthPercent="50%"
         app:layout_heightPercent="50%"
-        app:srcCompat="@drawable/schedule1"
+
         android:layout_toRightOf="@+id/day1"
         android:scaleType="centerCrop"
         android:layout_alignParentTop="true"
@@ -31,7 +32,7 @@
         android:id="@+id/day3"
         app:layout_widthPercent="50%"
         app:layout_heightPercent="50%"
-        app:srcCompat="@drawable/schedule1"
+
         android:scaleType="centerCrop"
 
         android:layout_alignParentBottom="true"
@@ -42,7 +43,7 @@
         android:id="@+id/day4"
         app:layout_widthPercent="50%"
         app:layout_heightPercent="50%"
-        app:srcCompat="@drawable/schedule1"
+
         android:scaleType="centerCrop"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"

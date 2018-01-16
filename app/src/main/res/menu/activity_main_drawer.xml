@@ -21,6 +21,11 @@
             android:id="@+id/sponsors"
             android:icon="@drawable/ic_sponsor"
             android:title="Sponsors" />
+        <item
+            android:id="@+id/announcement"
+            android:icon="@drawable/ic_announcement_black_24dp"
+            android:title="Announcements" />
+
 
         <item
             android:id="@+id/about"

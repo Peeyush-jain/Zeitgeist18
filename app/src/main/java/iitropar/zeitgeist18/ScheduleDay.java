@@ -48,7 +48,7 @@ public class ScheduleDay extends AppCompatActivity {
 
             getSupportActionBar().setTitle("Day 4");
         }
-
+        getSupportActionBar().setElevation(0);
         viewPager = findViewById(R.id.viewpager);
         setupViewPager(viewPager);
 
